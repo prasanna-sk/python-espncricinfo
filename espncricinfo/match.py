@@ -119,7 +119,7 @@ class Match(object):
         return "http://static.espncricinfo.com"+self.match_json()['legacy_url']
 
     def details_url(self, page=1):
-        return self.event_url+"/competitions/{0}/details?pagesize=1000&page={1}".format(str(match_id), str(page))
+        return self.event_url+"/competitions/{0}/details?pagesize=1000&page={1}".format(str(self.match_id), str(page))
 
     def __str__(self):
         return self.json['description']
